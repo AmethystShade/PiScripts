@@ -1,10 +1,8 @@
-# PiScripts
+# JoyconScripts
 
-Python scripts intended to be used with a Raspberry Pi.
-
-**Most of this PROBABLY WON'T WORK with your own setup.** However, `joycon_test.py` might be useful as an example for getting Joycon inputs.
+Scripts to get data from Nintendo Joycons. Requires [joycon-python](https://pypi.org/project/joycon-python/).
 
 ## Current scripts:
 
-- `joycon_test.py`: displays basic Joycon input, including buttons pressed and data from the left joystick. Requires [joycon-python](https://pypi.org/project/joycon-python/).
-- `calibration.py`: (WIP) Generates data about Joycon joysticks. Requires [joycon-python](https://pypi.org/project/joycon-python/).
+- `joycon_test.py`: Displays basic Joycon input, including buttons pressed and data from the left joystick.
+- `calibration.py`: (WIP) Generates data about Joycon joysticks.
