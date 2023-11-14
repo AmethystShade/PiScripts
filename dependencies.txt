@@ -1,0 +1,7 @@
+From pip:
+joycon-python
+hidapi
+pyglm
+
+From apt:
+python3-hidapi
