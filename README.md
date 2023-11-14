@@ -7,3 +7,4 @@ Python scripts intended to be used with a Raspberry Pi.
 ## Current scripts:
 
 - `joycon_test.py`: displays basic Joycon input, including buttons pressed and data from the left joystick. Requires [joycon-python](https://pypi.org/project/joycon-python/).
+- `calibration.py`: (WIP) Generates data about Joycon joysticks. Requires [joycon-python](https://pypi.org/project/joycon-python/).
