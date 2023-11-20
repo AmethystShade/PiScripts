@@ -2,6 +2,7 @@ From pip:
 joycon-python
 hidapi
 pyglm
+getkey
 
 From apt:
 python3-hidapi
