@@ -31,9 +31,9 @@ while True:
         angle = "N/A"
     elif dY == 0:
         if dX > 0:
-            angle = 90
+            angle = 90.0
         else:
-            angle = 270
+            angle = -90.0
     else:
         angle = round(math.atan(dX/dY)*180/math.pi, 1)
     
