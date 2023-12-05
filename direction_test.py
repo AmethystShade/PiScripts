@@ -15,9 +15,29 @@ def input_check():
             y -= 10
         if key == getkey.keys.D and x < 3600:
             x += 10
-        if key == getkey.keys.A and y > 0:
+        if key == getkey.keys.A and x > 0:
             x -= 10
         time.sleep(0.01)
+
+def calc_L(a, d):
+    if a != "N/A":
+        a -= 90
+        if a < 0: a += 360
+    return calc_R(a,d)
+
+def calc_R(a, d):
+    if a != "N/A" and d <= 1800:
+        D = d / 1800
+        A = a % 180
+        if a >= 180: mult = 1 #Ternary operations are so much cooler in C#...
+        else: mult = -1
+
+        out = ((A-45) / 45)
+        if out > 1: out = 1
+        return out * mult * D
+    else:
+        return 0
+
 
 input_thread = threading.Thread(target=input_check, args=())
 input_thread.start()
@@ -41,10 +61,14 @@ while True:
         angle += 180
     elif dX < 0:
         angle += 360
+    
+    
 
     os.system("clear")
     print("x:", x, "\n")
     print("y:", y, "\n")
     print("Distance:", round(distance), "  inBounds:", inBounds, "\n")
-    print("Angle:", angle)
+    print("Angle:", angle, "\n")
+    print("output_L:", calc_L(angle, 1800), "output_R:", calc_R(angle, 1800), "\n")
+    print("output_L_dist:", calc_L(angle, distance), "output_R_dist:", calc_R(angle, distance))
     time.sleep(0.01)
