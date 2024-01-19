@@ -10,3 +10,4 @@ Scripts to get data from Nintendo Joycons. Requires [joycon-python](https://pypi
     - Now also gives outputs for mecanum wheel motors based on coordinates (for later use with joystick).
 - `get_speed.py`: Calculates robot speed based on wheel RPM. (Todo: move to other repo)
 - `direction_test_old.py`: Old version of direction_test, for motors controlling a tank-like robot.
+- `joycon_direction.py`: Same as direction_test, using Joycons as input (Left stick, L, R, Home to quit).
